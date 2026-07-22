@@ -62,131 +62,203 @@ Use the exchange suffix Yahoo Finance expects for non-US tickers, e.g.
 
 <img width="1012" height="783" alt="image" src="https://github.com/user-attachments/assets/f714464a-47ed-46e1-9b10-59792dfd162c" />
 
-Overview
 
-The Stock Analysis Dashboard is a Python-based financial analysis tool that automatically collects stock market data and generates a professional PDF report. It helps investors, students, and financial analysts quickly understand a company's financial performance, stock trends, and recent news.
+# 📈 Stock Analysis Dashboard
 
-The example below shows the analysis report generated for Reliance Industries Ltd (RELIANCE.NS) using live financial data.
+A Python-based financial analysis tool that fetches live stock market data, performs financial analysis, generates charts, collects the latest company news, and automatically creates a professional PDF report.
 
-Dashboard Features
-1. Company Information
+---
 
-The report starts with the company's basic information:
+## 📖 Overview
 
-Company Name: Reliance Industries Ltd
-Stock Symbol: RELIANCE.NS
-Industry: Oil & Gas Refining & Marketing
-Current Share Price: ₹1327.20
-Report Generation Date & Time
+The **Stock Analysis Dashboard** helps investors, students, and financial analysts quickly understand a company's financial performance through an automatically generated report.
 
-This gives users an overview of the selected company.
+The dashboard uses **Yahoo Finance** to retrieve real-time financial information and presents it in an easy-to-read PDF format containing:
 
-2. Key Financial Ratios
+- Company Information
+- Key Financial Ratios
+- Stock Price Trend
+- Revenue vs Net Income Comparison
+- Latest Financial News
 
-The dashboard displays important financial metrics that help evaluate the company's financial health.
+The example shown below is generated for **Reliance Industries Ltd (RELIANCE.NS)**.
 
-Metric	Meaning
-Market Cap	Total market value of the company. Larger companies are generally more stable.
-52-Week High	Highest stock price in the last 12 months.
-52-Week Low	Lowest stock price in the last 12 months.
-P/E Ratio (Trailing)	Shows how much investors are willing to pay for each ₹1 of earnings.
-Forward P/E	Expected valuation based on future earnings.
-P/B Ratio	Compares market price with book value.
-P/S Ratio	Compares company value with revenue.
-EPS (Earnings Per Share)	Profit earned per share. Higher EPS generally indicates better profitability.
-Dividend Yield	Percentage of profit distributed to shareholders.
-Gross Margin	Percentage of revenue remaining after production costs.
-Operating Margin	Profit from core business operations.
-Net Margin	Final profit after all expenses.
-ROE (Return on Equity)	Measures how efficiently shareholder money is used.
-ROA (Return on Assets)	Shows how efficiently company assets generate profit.
-Current Ratio	Measures the company's ability to pay short-term liabilities.
-Debt-to-Equity Ratio	Indicates how much debt the company uses compared to shareholders' equity.
-Charts
-📉 1-Year Stock Price Chart
+---
 
-This chart shows the stock's performance over the last year.
+# 📄 Dashboard Explanation
+
+## 1. Company Information
+
+At the top of the report, the dashboard displays the company's basic details.
 
 It includes:
 
-Daily closing price
-50-Day Moving Average
-200-Day Moving Average
+- Company Name
+- Stock Symbol
+- Industry
+- Current Share Price
+- Report Generation Date & Time
 
-These moving averages help identify market trends:
+This section provides a quick overview of the selected company.
 
-Price above moving averages → Bullish trend
-Price below moving averages → Bearish trend
-📊 Revenue vs Net Income
+---
 
-This bar chart compares:
+# 📊 Charts
 
-Annual Revenue
-Annual Net Income
+## 1. One-Year Stock Price Trend
 
-It helps users understand:
+The first chart visualizes the stock's price movement over the past year.
 
-Business growth
-Profitability
-Financial consistency across multiple years
+It includes:
 
-Higher revenue with increasing net income usually indicates a financially healthy company.
+- Daily Closing Price
+- 50-Day Moving Average
+- 200-Day Moving Average
 
-Recent News
+### Purpose
 
-The report also displays the latest news headlines related to the selected company.
+- Identify long-term market trends.
+- Detect bullish or bearish momentum.
+- Compare short-term and long-term price movements.
+
+---
+
+## 2. Revenue vs Net Income
+
+This bar chart compares annual:
+
+- Revenue
+- Net Income
+
+### Purpose
+
+- Measure business growth.
+- Compare sales with profitability.
+- Evaluate financial consistency across multiple years.
+
+A company with increasing revenue and growing net income generally indicates healthy financial performance.
+
+---
+
+# 📰 Recent News
+
+The report automatically fetches the latest news headlines related to the selected company.
 
 Examples include:
 
-Quarterly earnings
-Business expansion
-Market performance
-Major investments
-Industry updates
+- Quarterly earnings
+- Business expansion
+- Market updates
+- Investment announcements
+- Industry developments
 
-Including news helps users understand the reasons behind stock price movements.
+Including recent news helps users understand the events influencing stock price movements.
 
-Technologies Used
-Python
-yFinance – Live stock market data
-Pandas – Data processing
-Matplotlib – Data visualization
-Feedparser – Financial news
-ReportLab – PDF report generation
-Workflow
+---
+
+# ⚙️ Technologies Used
+
+- Python
+- yFinance
+- Pandas
+- Matplotlib
+- Feedparser
+- ReportLab
+
+---
+
+# 🔄 Project Workflow
+
+```text
 User enters Stock Symbol
-          │
-          ▼
-Fetch Market Data (Yahoo Finance)
-          │
-          ▼
-Calculate Financial Ratios
-          │
-          ▼
-Generate Charts
-          │
-          ▼
-Fetch Latest Financial News
-          │
-          ▼
+        │
+        ▼
+Fetch Live Market Data
+        │
+        ▼
+Extract Financial Ratios
+        │
+        ▼
+Generate Stock Price Chart
+        │
+        ▼
+Generate Revenue vs Net Income Chart
+        │
+        ▼
+Fetch Latest News Headlines
+        │
+        ▼
 Create Professional PDF Report
-Key Highlights
-📈 Live stock market data
-📊 Professional financial ratio analysis
-📉 Moving average trend analysis
-💰 Revenue and profit comparison
-📰 Latest financial news integration
-📄 Automatic PDF report generation
-⚡ Easy-to-use command-line interface
-Example Output
+```
 
-The generated report includes:
+---
 
-Company profile
-Key financial ratios
-1-year stock price chart
-Revenue vs. Net Income chart
-Latest news headlines
-Professional PDF layout suitable for presentations and project demonstrations
+# ✨ Features
 
-This project demonstrates practical skills in Python, financial data analysis, data visualization, API integration, PDF report generation, and automation, making it a strong portfolio project for roles in Financial Analysis, Data Analysis, Business Analytics, and Python Development.
+- 📈 Live stock market data
+- 📊 Financial ratio analysis
+- 📉 Moving average trend analysis
+- 💰 Revenue and profit comparison
+- 📰 Latest financial news integration
+- 📄 Automatic PDF report generation
+- ⚡ Fast and lightweight
+- 💻 Easy-to-use command-line interface
+
+---
+
+# 🎯 Project Objectives
+
+- Automate financial report generation.
+- Provide a quick overview of company fundamentals.
+- Visualize stock performance using charts.
+- Help investors make informed decisions.
+- Demonstrate Python skills in data analysis and automation.
+
+---
+
+# 📂 Sample Output
+
+The generated report contains:
+
+- Company Profile
+- Financial Ratios
+- One-Year Stock Price Chart
+- Revenue vs Net Income Chart
+- Latest News Headlines
+- Professionally formatted PDF report
+
+---
+
+# 🚀 Future Improvements
+
+- Interactive dashboard using Streamlit
+- Technical indicators (RSI, MACD, Bollinger Bands)
+- Candlestick charts
+- Peer company comparison
+- Portfolio tracking
+- AI-powered stock insights
+- Export reports in Excel and HTML formats
+- Email report automation
+
+---
+
+# 📌 Conclusion
+
+The **Stock Analysis Dashboard** is a complete financial reporting solution that combines live market data, financial metrics, data visualization, and news into a single automated PDF report.
+
+This project demonstrates practical skills in:
+
+- Python Programming
+- Financial Data Analysis
+- Data Visualization
+- API Integration
+- PDF Report Generation
+- Automation
+
+It is an excellent portfolio project for roles such as:
+
+- Financial Analyst
+- Business Analyst
+- Data Analyst
+- Investment Research Analyst
+- Python Developer
